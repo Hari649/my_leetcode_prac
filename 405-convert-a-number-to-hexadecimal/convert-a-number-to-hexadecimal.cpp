@@ -1,0 +1,18 @@
+class Solution {
+public:
+    string toHex(int num) {
+        if (num == 0) return "0";
+
+        string hex = "0123456789abcdef";
+        string result = "";
+
+        unsigned int n = num;  // handles negative numbers (two's complement)
+
+        while (n > 0) {
+            result = hex[n & 15] + result;
+            n >>= 4;
+        }
+
+        return result;
+    }
+};
