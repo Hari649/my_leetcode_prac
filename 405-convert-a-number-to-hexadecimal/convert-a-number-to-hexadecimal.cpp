@@ -6,7 +6,7 @@ public:
         string hex = "0123456789abcdef";
         string result = "";
 
-        unsigned int n = num;  // handles negative numbers (two's complement)
+        unsigned int n = num;   
 
         while (n > 0) {
             result = hex[n & 15] + result;
